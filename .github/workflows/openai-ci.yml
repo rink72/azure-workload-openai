@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   dev:
-    uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
+    uses: rink72/terraform-library/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/dev.yml
       action: plan
@@ -24,7 +24,7 @@ jobs:
 
   test:
     needs: dev
-    uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
+    uses: rink72/terraform-library/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/test.yml
       action: plan
@@ -39,7 +39,7 @@ jobs:
 
   prod:
     needs: test
-    uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
+    uses: rink72/terraform-library/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/prod.yml
       action: plan
