@@ -22,6 +22,7 @@ jobs:
       subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
   test:
+    needs: dev
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/test.yml
@@ -35,6 +36,7 @@ jobs:
       subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
   prod:
+    needs: test
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/prod.yml
