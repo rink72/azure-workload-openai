@@ -1,0 +1,8 @@
+---
+location: australiaeast
+service_code: demo
+context_code: boo
+owner: sam@sam.com
+environment: test
+environment_code: t
+billing_code: 123456
