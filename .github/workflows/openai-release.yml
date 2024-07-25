@@ -8,7 +8,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  dev:
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: ${{ github.workspace }}/tests/openai/openai.yml
