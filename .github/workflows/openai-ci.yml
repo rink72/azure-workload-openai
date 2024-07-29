@@ -12,6 +12,7 @@ jobs:
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/dev.yml
+      action_version: v0.0.3
       action: plan
       github_environment: dev
       state_resource_group: rink72tf-rg
@@ -27,6 +28,7 @@ jobs:
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/test.yml
+      action_version: v0.0.3
       action: plan
       github_environment: test
       state_resource_group: rink72tf-rg
@@ -42,6 +44,7 @@ jobs:
     uses: rink72/terraform-library/.github/workflows/deploy-openai-workflow.yml@main
     with:
       configuration_path: configuration/prod.yml
+      action_version: v0.0.3
       action: plan
       github_environment: prod
       state_resource_group: rink72tf-rg
